@@ -17,6 +17,7 @@ _This is an early WIP with a few hours gone in to both the extension and the gam
 | Show File Push Notifications | `bitburner.showPushSuccessNotification` | If true, this will show a notification/toast when a file has been successfully pushed to the game. Errors will always show. | `false` |
 | Show File Watcher Enabled Notifications | `bitburner.showFileWatcherEnabledNotification` | If true, this will show a notification/toast whenever the File Watcher is enabled and/or the extension configuration scriptRoot has changed. Errors will always show. | `false` |
 | Game Authentication Token | `bitburner.authToken` | The auth token that the game generates, needed for you to be able to push files in to your game client. See [#authentication](#authentication) section below. | (No Default) |
+| Script Root Full Path | `bitburner.scriptRootFullPath` | Help with Mull-Root Workspace | `true` |
 
 ## Pushing Files
 
@@ -73,7 +74,7 @@ _With the the following configuration `scriptRoot: "./out/"`..._
 
 ## Bitburner
 
-> Bitburner is a programming-based incremental game. Write scripts in JavaScript to automate gameplay, learn skills, play minigames, solve puzzles, and more in this cyberpunk text-based incremental RPG.
+> Bitburner is a programming-based incremental game. Write scripts in JavaScript to automate gameplay, learn skills, play miniwgames, solve puzzles, and more in this cyberpunk text-based incremental RPG.
 
 ### Relevant Links
 

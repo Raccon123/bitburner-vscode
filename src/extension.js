@@ -22,7 +22,7 @@ let fwEnabled;
 
 // TODO: Refactor this user config to combined 'extension/user config' with better internal API/structure
 /**
- * @type {{ scriptRoot: string, fwEnabled: boolean, showPushSuccessNotification: boolean, showFileWatcherEnabledNotification: boolean, authToken: string }}
+ * @type {{ scriptRoot: string, fwEnabled: boolean, showPushSuccessNotification: boolean, showFileWatcherEnabledNotification: boolean, authToken: string,scriptRootFullPath: boolean }}
  */
 let sanitizedUserConfig;
 
@@ -174,6 +174,7 @@ function deactivate() {}
  * event handler callbacks.
  * @param {string} rootDir The root directory to watch for changes
  */
+
 const initFileWatcher = (rootDir = `./`) => {
   const fullWatcherPathGlob = `${vscode.workspace.workspaceFolders
     .map((folder) => folder.uri.fsPath.toString())
@@ -333,6 +334,7 @@ const sanitizeUserConfig = () => {
       .get(`authToken`)
       .replace(/^bearer/i, ``)
       .trim(),
+    scriptRootFullPath: userConfig.get(`scriptRootFullPath`),
   };
 };
 
